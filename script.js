@@ -7,7 +7,7 @@ const recipeDetailsContent = document.querySelector('.recipe-details-content');
 
 const fetchRecipes = async (query) => {
     // change recipecontainer text to fetching
-    recipeContainer.innerHTML="fetching recipes..."
+    recipeContainer.innerHTML = '<div class="recipe-loading">Fetching recipes...</div>';
     try{
         const data = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`);
     const response = await data.json();
